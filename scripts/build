@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Build the project
+set -Eeuo pipefail
+trap 'echo "${BASH_SOURCE[0]}: line $LINENO: $BASH_COMMAND: exitcode $?"' ERR
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR/.."
+START_TIME=$(date +%s.%N)
+
+# Configuration
+CONTENT_FILE="content.md"
+TEMPLATE_FILE="template.html"
+OUTPUT_FILE="index.html"
+
+# Read the markdown file and extract metadata
+echo "Converting markdown to HTML..."
+MARKDOWN_CONTENT=$(cat "$CONTENT_FILE")
+
+# Extract title, heading, and subtitle from the first few lines
+HEADING=$(echo "$MARKDOWN_CONTENT" | grep -m1 "^# " | sed 's/^# //')
+SUBTITLE=$(echo "$MARKDOWN_CONTENT" | grep -m1 "^\*\*" | sed 's/^\*\*//;s/\*\*$//')
+TITLE="$HEADING by webcoyote"
+
+# Convert markdown to HTML (skip the first three lines: heading, subtitle, and blank line)
+HTML_CONTENT=$(echo "$MARKDOWN_CONTENT" | tail -n +4 | uvx --from markdown --quiet python3 -c "
+import sys
+import markdown
+
+md_text = sys.stdin.read()
+html = markdown.markdown(md_text)
+print(html)
+")
+
+# Read template and replace placeholders
+TEMPLATE=$(cat "$TEMPLATE_FILE")
+OUTPUT="$TEMPLATE"
+
+# Replace placeholders
+OUTPUT="${OUTPUT//\{\{TITLE\}\}/$TITLE}"
+OUTPUT="${OUTPUT//\{\{HEADING\}\}/$HEADING}"
+OUTPUT="${OUTPUT//\{\{SUBTITLE\}\}/$SUBTITLE}"
+OUTPUT="${OUTPUT//\{\{CONTENT\}\}/$HTML_CONTENT}"
+
+# Write output
+echo "$OUTPUT" > "$OUTPUT_FILE"
+
+echo "Generated $OUTPUT_FILE from $CONTENT_FILE and $TEMPLATE_FILE"
+
+END_TIME=$(date +%s.%N)
+ELAPSED_TIME=$(echo "$END_TIME - $START_TIME" | bc --mathlib | xargs printf "%.2f\n")
+echo "✅ Build completed in $ELAPSED_TIME seconds!"
