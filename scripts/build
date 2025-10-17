@@ -30,18 +30,30 @@ html = markdown.markdown(md_text)
 print(html)
 ")
 
-# Read template and replace placeholders
-TEMPLATE=$(cat "$TEMPLATE_FILE")
-OUTPUT="$TEMPLATE"
+# Use Python to safely replace placeholders in template
+python3 -c "
+import sys
+
+# Read template
+with open('$TEMPLATE_FILE', 'r') as f:
+    template = f.read()
+
+# Read replacements from stdin
+title = '''$TITLE'''
+heading = '''$HEADING'''
+subtitle = '''$SUBTITLE'''
+content = '''$HTML_CONTENT'''
 
 # Replace placeholders
-OUTPUT="${OUTPUT//\{\{TITLE\}\}/$TITLE}"
-OUTPUT="${OUTPUT//\{\{HEADING\}\}/$HEADING}"
-OUTPUT="${OUTPUT//\{\{SUBTITLE\}\}/$SUBTITLE}"
-OUTPUT="${OUTPUT//\{\{CONTENT\}\}/$HTML_CONTENT}"
+output = template.replace('{{TITLE}}', title)
+output = output.replace('{{HEADING}}', heading)
+output = output.replace('{{SUBTITLE}}', subtitle)
+output = output.replace('{{CONTENT}}', content)
 
 # Write output
-echo "$OUTPUT" > "$OUTPUT_FILE"
+with open('$OUTPUT_FILE', 'w') as f:
+    f.write(output)
+"
 
 echo "Generated $OUTPUT_FILE from $CONTENT_FILE and $TEMPLATE_FILE"
 

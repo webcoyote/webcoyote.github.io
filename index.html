@@ -36,67 +36,68 @@
         </div>
 
         <p>If you've looked at my <a href="https://github.com/webcoyote">GitHub page</a> you might be a bit confused by all the projects listed there. What are they and how do they relate to each other?!? I hope this page will explain.</p>
-<h2>Building Linux virtual machines</h2>
-<p>I have Mac and Windows laptops, but prefer developing web applications on Linux in virtual machines so I can simulate the environment those apps will be deployed on. Building virtual machines is time-consuming, so I've automated the process using several projects.</p>
+<h2>AI</h2>
 <ul>
 <li>
-<p><a href="https://github.com/webcoyote/linux-vm">linux-vm</a>: [Original] [Windows] Builds a complete Linux virtual machine including installing all required software (<a href="https://www.virtualbox.org/">VirtualBox</a>, <a href="http://vagrantup.com/">Vagrant</a>, <a href="http://chocolatey.org/">Chocolatey</a>, and <a href="http://git-scm.com/">Git</a>). This project is designed to make it easy to test-drive Linux.</p>
+<p><a href="https://github.com/webcoyote/sandvault">sandvault</a>: [Original] [macOS] Run AI agents (Claude Code, OpenAI Codex, and Google Gemini) in a sandboxed macOS user account to protect your system from potential AI-generated code risks.</p>
 </li>
 <li>
-<p><a href="https://github.com/webcoyote/workstation-setup">workstation-setup</a>: [Original] [Mac/Linux] After I've purchased a new computer or built a virtual machine, it always seems a bit empty. I use this project to specify the Mac/Linux software that I use regularly during developing, including my editor (<a href="https://www.sublimetext.com/">Sublime Text 2</a>, my shell (<a href="http://www.zsh.org/">Zsh</a> and <a href="https://github.com/robbyrussell/oh-my-zsh">Oh-my-zsh</a>), my browser (<a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>), my desktop window manager (<a href="http://xmonad.org/">XMonad</a>), and other useful programs.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/pivotal_workstation">pivotal_workstation</a>: [Cloned] [Mac/Linux] This repo contains a large set of recipes used to install software. It was primarily used to configure Mac systems but I've been updating it to include more Linux recipes and make it work on CentOS as well as Ubuntu. This project is referenced by workstation-setup to perform the actual software installation work.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/dotfiles">dotfiles</a>: [Original] [Mac/Linux] Everyone likes to configure their software to their own special needs. This repository contains the settings I use for my projects. This project is referenced by linux-vm to install <em>my</em> dotfiles; you can clone it so that you can load <em>your</em> changes when you're building virtual machines.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/veewee-berkshelf">veewee-berkshelf</a>: [Cloned] [Mac/Linux/Windows] Builds virtual machine "base box" images for <a href="http://vagrantup.com/">Vagrant</a> from Linux ISO files. If you don't trust others to build Vagrant boxes then you'll want to clone this recipe and build your own.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/chef-solo-search">chef-solo-search</a>: [Cloned] [All platforms] If you're using the [Chef] system provisioning platform for Vagrant, you'll discover many of the system configuration recipes require Chef Server. This repository makes it possible to utilize Chef without Chef Server. I modified the library to incorporate changes by another programmer for Chef 11, which haven't been accepted into the mainline yet.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/chef-dotfiles">chef-dotfiles</a>: [Original] [Mac/Linux] This repository is used by linux-vm to perform installation of "dotfiles" (configuration files) onto computers during the provisioning process.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/chocolatey">chocolatey</a>: [Cloned] [Windows] The Chocolatey package manager makes it possible to install software from the command line, or using a script, as I do in the <a href="https://github.com/webcoyote/linux-vm/blob/master/INSTALL.ps1">linux-vm install script</a>. I modified the library to add error-handling, which changes have not been accepted into the mainline yet.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/chocolatey-packages">chocolatey-packages</a>: [Original] [Windows] Scripts for the Vagrant package when using the Chocolatey package manager.</p>
+<p><a href="https://github.com/webcoyote/clodpod">clodpod</a>: [Original] [macOS] Run AI agents (Claude Code, OpenAI Codex, and Google Gemini) sandboxed inside an OSX virtual machine for security and isolation.</p>
 </li>
 </ul>
-<h2>Linux utilities</h2>
+<h2>Browser</h2>
+<ul>
+<li><a href="https://github.com/webcoyote/TubeGate">TubeGate</a>: [Original] [Chrome] A Chrome browser extension that removes unwanted videos from your YouTube feed. <a href="https://chromewebstore.google.com/detail/tubegate/aokfpmegeafainbhjfhkgnhlodnndpck">Chrome Web Store Listing</a></li>
+</ul>
+<h2>iOS</h2>
 <ul>
 <li>
-<p><a href="https://github.com/webcoyote/gnome-config-listener">gnome-config-listener</a>: [Original] [Linux] This project is used to build a program that listens for <a href="http://www.gnome.org/">Gnome desktop</a> configuration changes and writes them to the terminal. I can configure my computer and save all the changes so they can be replayed on other computers.</p>
+<p><a href="https://github.com/webcoyote/habits">habits</a>: [Original] [iOS] Unpublished IOS app to track daily habits and build consistent routines.</p>
 </li>
 <li>
-<p><a href="https://github.com/webcoyote/network">network</a>: [Cloned] [Linux] A program that visualizes network traffic using 3d imagining. I added some scripts to install the pre-requisites and make the program run "nicely".</p>
+<p><a href="https://github.com/webcoyote/daysleft">daysleft</a>: [Original] [iOS] Unpublished iOS widget app to track days until important events.</p>
+</li>
+<li>
+<p><a href="https://github.com/webcoyote/realitykit">realitykit</a>: [Original] [iOS] Unpublished RealityKit test app for iOS exploring AR and 3D capabilities.</p>
 </li>
 </ul>
-<h2>Windows development</h2>
+<h2>macOS</h2>
+<ul>
+<li><a href="https://github.com/webcoyote/creevey">Phoenix Slides</a>: [Cloned] [macOS] A Mac application to view pictures; similar to the Windows <a href="https://www.irfanview.com">IrfanView</a> app.</li>
+</ul>
+<h2>Development Tools</h2>
 <ul>
 <li>
-<p><a href="https://github.com/webcoyote/CSNamedPipes">CSNamedPipes</a>: [Original] [Windows]
-CSNamedPipes is a demo application that implements interprocess communication (IPC) using Named Pipes in C#. Many programmers had problems handling client-disconnects using Named Pipes, so I wrote this application to (a) learn C# and (b) solve that problem.</p>
+<p><a href="https://github.com/webcoyote/git-multi-hook">git-multi-hook</a>: [Original] [All platforms] Enable multiple global and per-repo git hooks while keeping existing hooks working.</p>
+</li>
+<li>
+<p><a href="https://github.com/webcoyote/pbutils">pbutils</a>: [Original] [All platforms] Cross-platform utilities: pbcopy (copy stdin to clipboard), pbpaste (paste clipboard to stdout), tnet (simple telnet).</p>
+</li>
+</ul>
+<h2>System Configuration</h2>
+<ul>
+<li><a href="https://github.com/webcoyote/dotfiles">dotfiles</a>: [Original] [All platforms] Everyone likes to configure their software to their own special needs. This repository contains the settings I use for my projects. This project is referenced by linux-vm to install <em>my</em> dotfiles; you can clone it so that you can load <em>your</em> changes when you're building virtual machines.</li>
+</ul>
+<h2>Windows</h2>
+<ul>
+<li>
+<p><a href="https://github.com/webcoyote/CSNamedPipes">CSNamedPipes</a>: [Original] [Windows] CSNamedPipes is a demo application that implements interprocess communication (IPC) using Named Pipes in C#. Many programmers had problems handling client-disconnects using Named Pipes, so I wrote this application to (a) learn C# and (b) solve that problem.</p>
 </li>
 <li>
 <p><a href="https://github.com/webcoyote/coho">coho</a>: [Original] [Windows] This library is a basic toolkit for writing C++ programs from scratch on Windows. After having done this many times before I decided to open-source it so I won't have to rewrite again. Sadly most of my recent development has been on Linux and this library has languished.</p>
 </li>
 </ul>
-<h2>Obsolete</h2>
+<h2>Linux Utilities</h2>
 <ul>
-<li>
-<p><a href="https://github.com/webcoyote/build-linux-vm">build-linux-vm</a>: [Windows] This was an earlier attempt at building Linux virtual machines, but it requires too many manual steps!</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/linux-setup">linux-setup</a>: [Linux] An earlier attempt at system configuration that has since been replaced by my workstation-setup and dotfiles repos.</p>
-</li>
-<li>
-<p><a href="https://github.com/webcoyote/vagrant">vagrant</a>: [Cloned] [Windows] added SSH support for Windows [merged]</p>
-</li>
+<li><a href="https://github.com/webcoyote/gnome-config-listener">gnome-config-listener</a>: [Original] [Linux] This project is used to build a program that listens for <a href="http://www.gnome.org/">Gnome desktop</a> configuration changes and writes them to the terminal. I can configure my computer and save all the changes so they can be replayed on other computers.</li>
+</ul>
+<h2>Programming Experiments</h2>
+<ul>
+<li><a href="https://github.com/webcoyote/two-queues">two-queues</a>: [Original] [Python/Go] Benchmarking Redis and ZeroMQ pub-sub, using Python and Google's Go language.</li>
+</ul>
+<h2>Miscellaneous Code</h2>
+<ul>
+<li><a href="https://github.com/webcoyote/aho_corasick">aho_corasick</a>: [Cloned] [C++] A C++ implementation of the aho corasick pattern search algorithm for efficient string matching.</li>
 </ul>
       </section>
 
