@@ -18,6 +18,8 @@ If you've looked at my [GitHub page](https://github.com/webcoyote) you might be 
 
 ## iOS
 
+- [push10k](apps/push10k/index.html): [Original] [iOS] Achieve 10,000 pushups per year with daily tracking and multi-tiered achievements. [App Store](https://apps.apple.com/us/app/push10k/id6754811078)
+
 - [habits](https://github.com/webcoyote/habits): [Original] [iOS] Unpublished IOS app to track daily habits and build consistent routines.
 
 - [realitykit](https://github.com/webcoyote/realitykit): [Original] [iOS] Unpublished RealityKit test app for iOS exploring AR and 3D capabilities.
