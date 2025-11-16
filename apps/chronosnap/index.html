@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>push10k - You can do 10,000 pushups</title>
-    <meta name="description" content="push10k helps you achieve 10,000 pushups per year by encouraging daily practice. Track your progress and crush your fitness goals.">
+    <title>ChronoSnap - Multiple pics with one click</title>
+    <meta name="description" content="ChronoSnap enables rapid photo capture with customizable timing. Perfect for capturing fleeting moments like children's smiles, athletes in motion, or group photos where timing is everything.">
     <style>
         * {
             margin: 0;
@@ -132,58 +132,6 @@
             height: 24px;
         }
 
-        /* Screenshots Section */
-        .screenshots {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .screenshots h3 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 50px;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .screenshot-gallery {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            padding: 20px 0;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-        }
-
-        .screenshot-item {
-            flex: 0 0 280px;
-            scroll-snap-align: center;
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .screenshot-item img:hover {
-            transform: scale(1.02);
-        }
-
         /* Features Section */
         .features {
             padding: 60px 0;
@@ -236,20 +184,27 @@
             line-height: 1.6;
         }
 
-        /* Stats Section */
-        .stats {
+        /* Use Cases Section */
+        .use-cases {
             padding: 60px 0;
             text-align: center;
         }
 
-        .stats-grid {
+        .use-cases h3 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .use-cases-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .stat-item {
+        .use-case-item {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -257,15 +212,14 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .stat-number {
+        .use-case-icon {
             font-size: 48px;
-            font-weight: 900;
-            display: block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .stat-label {
-            font-size: 16px;
+        .use-case-label {
+            font-size: 18px;
+            font-weight: 600;
             opacity: 0.9;
         }
 
@@ -310,12 +264,8 @@
             }
 
             .features h3,
-            .screenshots h3 {
+            .use-cases h3 {
                 font-size: 32px;
-            }
-
-            .screenshot-item {
-                flex: 0 0 240px;
             }
         }
     </style>
@@ -324,8 +274,8 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8f/fe/3b/8ffe3bfe-4817-3c26-7c4d-7fea4ab28b37/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.png" alt="push10k app icon">
-                <h1>push10k</h1>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5f/33/38/5f3338d1-271c-4b91-9ae7-c527d633ddcb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.png" alt="ChronoSnap app icon">
+                <h1>ChronoSnap</h1>
             </div>
         </div>
     </header>
@@ -333,11 +283,11 @@
     <main>
         <section class="hero">
             <div class="container">
-                <img class="app-icon-large" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8f/fe/3b/8ffe3bfe-4817-3c26-7c4d-7fea4ab28b37/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.png" alt="push10k app icon">
-                <h2>push10k</h2>
-                <p class="tagline">You can do 10,000 pushups</p>
-                <p class="description">push10k helps you achieve 10,000 pushups per year by encouraging daily practice. Track your progress through multi-tiered achievements.</p>
-                <a href="https://apps.apple.com/us/app/push10k/id6754811078" class="cta-button">
+                <img class="app-icon-large" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5f/33/38/5f3338d1-271c-4b91-9ae7-c527d633ddcb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.png" alt="ChronoSnap app icon">
+                <h2>ChronoSnap</h2>
+                <p class="tagline">Multiple pics with one click</p>
+                <p class="description">Capture fleeting moments with rapid photo capture and customizable timing. Perfect for children's smiles, athletes in motion, or any moment where timing is everything.</p>
+                <a href="https://apps.apple.com/az/app/chronosnap/id6747997456" class="cta-button">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
                     </svg>
@@ -346,69 +296,53 @@
             </div>
         </section>
 
-        <section class="screenshots">
-            <div class="container">
-                <h3>See it in Action</h3>
-                <div class="screenshot-gallery">
-                    <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c0/0f/67/c00f6770-1008-d5c1-2342-9b99cd2d39cc/push10k-home.png/460x0w.webp" alt="push10k home screen">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/af/92/2daf92ad-4bbd-2f46-719b-24208398f27a/why-push10k-bottom.png/460x0w.webp" alt="Why push10k">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fd/c7/a2/fdc7a232-14da-33d7-656f-c19a5d19dc7c/push10k-awards.png/460x0w.webp" alt="push10k awards">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ed/e2/97/ede29750-a4ff-0bfa-c10a-4098324d967e/push10k-calendar.png/460x0w.webp" alt="push10k calendar">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="features">
             <div class="container">
                 <h3>Powerful Features</h3>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">💪</div>
-                        <h4>Daily Push</h4>
-                        <p>Track your maximum pushups performed in a single day and watch yourself improve over time.</p>
+                        <div class="feature-icon">📸</div>
+                        <h4>Continuous Capture</h4>
+                        <p>Take 10-100 photos with adjustable timing between shots. Never miss the perfect moment.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🔥</div>
-                        <h4>Weekly Warrior</h4>
-                        <p>Maintain consistent streaks throughout the week and build lasting habits.</p>
+                        <div class="feature-icon">🎬</div>
+                        <h4>Live Photos Support</h4>
+                        <p>Utilize Apple's Live Photos technology to capture moments with motion and sound.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">📈</div>
-                        <h4>Monthly Milestone</h4>
-                        <p>Monitor your long-term progress and see how far you've come each month.</p>
+                        <div class="feature-icon">🎭</div>
+                        <h4>Portrait Mode Ready</h4>
+                        <p>Depth-enabled photography for stunning portrait shots with beautiful background blur.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🏆</div>
-                        <h4>Champion</h4>
-                        <p>Reach the ultimate 10,000-pushup annual milestone and join the elite club.</p>
+                        <div class="feature-icon">✨</div>
+                        <h4>Intuitive Interface</h4>
+                        <p>Tap to focus, pinch to zoom, and easily switch between cameras for seamless photography.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="stats">
+        <section class="use-cases">
             <div class="container">
-                <h3>The Goal</h3>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">10,000</span>
-                        <span class="stat-label">Pushups per Year</span>
+                <h3>Perfect For</h3>
+                <div class="use-cases-grid">
+                    <div class="use-case-item">
+                        <div class="use-case-icon">👶</div>
+                        <div class="use-case-label">Children's Smiles</div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">~27</span>
-                        <span class="stat-label">Pushups per Day</span>
+                    <div class="use-case-item">
+                        <div class="use-case-icon">🏃</div>
+                        <div class="use-case-label">Athletes in Motion</div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">🎯</span>
-                        <span class="stat-label">One Goal, Big Results</span>
+                    <div class="use-case-item">
+                        <div class="use-case-icon">👨‍👩‍👧‍👦</div>
+                        <div class="use-case-label">Group Photos</div>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-icon">🎪</div>
+                        <div class="use-case-label">Action Moments</div>
                     </div>
                 </div>
             </div>
@@ -416,8 +350,8 @@
 
         <section class="hero">
             <div class="container">
-                <h3 style="font-size: 36px; margin-bottom: 30px;">Ready to Start Your Journey?</h3>
-                <a href="https://apps.apple.com/us/app/push10k/id6754811078" class="cta-button">
+                <h3 style="font-size: 36px; margin-bottom: 30px;">Ready to Capture Every Moment?</h3>
+                <a href="https://apps.apple.com/az/app/chronosnap/id6747997456" class="cta-button">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
                     </svg>
@@ -429,7 +363,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 push10k by Patrick Wyatt. All rights reserved.</p>
+            <p>&copy; 2025 ChronoSnap by Patrick Wyatt. All rights reserved.</p>
             <div>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="mailto:pat@codeofhonor.com">Contact</a>
