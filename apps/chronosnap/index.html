@@ -132,6 +132,58 @@
             height: 24px;
         }
 
+        /* Screenshots Section */
+        .screenshots {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .screenshots h3 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-gallery {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshot-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshot-gallery::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .screenshot-gallery::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .screenshot-item {
+            flex: 0 0 280px;
+            scroll-snap-align: center;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-item img:hover {
+            transform: scale(1.02);
+        }
+
         /* Features Section */
         .features {
             padding: 60px 0;
@@ -264,8 +316,13 @@
             }
 
             .features h3,
+            .screenshots h3,
             .use-cases h3 {
                 font-size: 32px;
+            }
+
+            .screenshot-item {
+                flex: 0 0 240px;
             }
         }
     </style>
@@ -293,6 +350,29 @@
                     </svg>
                     Download on App Store
                 </a>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="container">
+                <h3>See it in Action</h3>
+                <div class="screenshot-gallery">
+                    <div class="screenshot-item">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/45/0b/8d/450b8d2b-51ab-63f3-d808-e9e0fd24b8aa/resized_1.png/460x0w.webp" alt="ChronoSnap camera interface">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ee/e4/6f/eee46f14-6da0-ff34-35b4-08998e12e2f1/resized_2.png/460x0w.webp" alt="ChronoSnap settings">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a1/55/29/a1552971-8d3b-ac5e-b198-32253fda2881/resized_3.png/460x0w.webp" alt="ChronoSnap photo capture">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/26/86/47/26864784-423d-673a-5c22-286d78b0b7af/resized_4.png/460x0w.webp" alt="ChronoSnap gallery view">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/41/1f/bf411f01-cd8e-f786-6631-6768d30bda56/resized_5.png/460x0w.webp" alt="ChronoSnap features">
+                    </div>
+                </div>
             </div>
         </section>
 
