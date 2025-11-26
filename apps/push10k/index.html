@@ -143,31 +143,16 @@
         }
 
         .screenshot-gallery {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            overflow-x: auto;
             padding: 20px 0;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-        }
-
-        .screenshot-gallery::-webkit-scrollbar-thumb {
-            background: rgba(255, 204, 0, 0.5);
-            border-radius: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .screenshot-item {
-            flex: 0 0 280px;
-            scroll-snap-align: center;
+            width: 100%;
         }
 
         .screenshot-item img {
@@ -179,6 +164,19 @@
 
         .screenshot-item img:hover {
             transform: scale(1.02);
+        }
+
+        .screenshot-item:nth-child(4),
+        .screenshot-item:nth-child(5) {
+            grid-column: span 1;
+        }
+
+        .screenshot-row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 660px;
+            margin: 0 auto;
         }
 
         /* Features Section */
@@ -312,8 +310,13 @@
                 font-size: 32px;
             }
 
-            .screenshot-item {
-                flex: 0 0 240px;
+            .screenshot-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .screenshot-row-2 {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -349,16 +352,21 @@
                 <h3>See it in Action</h3>
                 <div class="screenshot-gallery">
                     <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c0/0f/67/c00f6770-1008-d5c1-2342-9b99cd2d39cc/push10k-home.png/460x0w.webp" alt="push10k home screen">
+                        <img src="screenshots/iPhone 16 Pro Max-0Home.png" alt="push10k home screen">
                     </div>
                     <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/af/92/2daf92ad-4bbd-2f46-719b-24208398f27a/why-push10k-bottom.png/460x0w.webp" alt="Why push10k">
+                        <img src="screenshots/iPhone 16 Pro Max-1About.png" alt="About push10k">
                     </div>
                     <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fd/c7/a2/fdc7a232-14da-33d7-656f-c19a5d19dc7c/push10k-awards.png/460x0w.webp" alt="push10k awards">
+                        <img src="screenshots/iPhone 16 Pro Max-2Awards.png" alt="push10k awards">
+                    </div>
+                </div>
+                <div class="screenshot-row-2">
+                    <div class="screenshot-item">
+                        <img src="screenshots/iPhone 16 Pro Max-3Progress.png" alt="push10k progress">
                     </div>
                     <div class="screenshot-item">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ed/e2/97/ede29750-a4ff-0bfa-c10a-4098324d967e/push10k-calendar.png/460x0w.webp" alt="push10k calendar">
+                        <img src="screenshots/iPhone 16 Pro Max-4History.png" alt="push10k history">
                     </div>
                 </div>
             </div>
@@ -366,7 +374,7 @@
 
         <section class="features">
             <div class="container">
-                <h3>Powerful Features</h3>
+                <h3>Milestones</h3>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">💪</div>
@@ -397,16 +405,12 @@
                 <h3>The Goal</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <span class="stat-number">10,000</span>
-                        <span class="stat-label">Pushups per Year</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">~27</span>
+                        <span class="stat-number">27</span>
                         <span class="stat-label">Pushups per Day</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">🎯</span>
-                        <span class="stat-label">One Goal, Big Results</span>
+                        <span class="stat-number">10,000</span>
+                        <span class="stat-label">Pushups per Year</span>
                     </div>
                 </div>
             </div>
